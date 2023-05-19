@@ -18,9 +18,9 @@
 
         class CustomStopWatch
         {
-            public DateTime StartTime { get; set; }
+            private DateTime StartTime { get; set; }
 
-            public TimeSpan TimeScore { get; set; }
+            private TimeSpan TimeScore { get; set; }
 
 
             public void Start()
