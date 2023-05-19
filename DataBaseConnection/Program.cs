@@ -31,6 +31,8 @@ namespace DataBaseConnection
     class CustomDb<T> where T : class
     {
         private string _connectionString;
+        private bool _isConnectionOpen = false;
+
 
         public CustomDb(string connectionString)
         {
@@ -39,18 +41,45 @@ namespace DataBaseConnection
 
         internal void OpenConnection()
         {
-            Console.WriteLine($"StartConnection({_connectionString})");
+            try
+            {
+                Console.WriteLine($"StartConnection({_connectionString})");
+                _isConnectionOpen = true;
+            }
+            catch
+            {
+                throw new SystemException();
+            }
+
         }
 
         internal void CloseConnection()
         {
-            Console.WriteLine($"EndConnection({_connectionString})");
+            if (_isConnectionOpen)
+            {
+               Console.WriteLine($"EndConnection({_connectionString})");
+            }
+            _isConnectionOpen = false;
         }
 
         internal List<T> RunSql(string sql)
         {
-            Console.WriteLine(sql);
-            return null;
+            try
+            {
+                if (_isConnectionOpen)
+                {
+                    Console.WriteLine(sql);
+                    return null;
+                }
+                return null;
+            }
+            catch
+            {
+                CloseConnection();
+                _isConnectionOpen= false;
+                throw new SystemException();
+            }
+
         }
 
     }
