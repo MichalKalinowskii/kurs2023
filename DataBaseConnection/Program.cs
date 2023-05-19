@@ -21,7 +21,7 @@ namespace DataBaseConnection
     {
         static void Main(string[] args)
         {
-            string connectionString = $"DB: {DBMS.MSSQL}; table: {nameof(Shape)}; timeout: 10";
+            string connectionString = $"DBMS: {DBMS.MSSQL}; AdressIp: 127.0.0.1; table: {nameof(Shape)}; timeout: 10";
 
             CustomDbCommand<Shape> db = new CustomDbCommand<Shape>(connectionString, "select * from shapes");
             db.GetData();
