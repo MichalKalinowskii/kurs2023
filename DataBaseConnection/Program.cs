@@ -10,7 +10,7 @@ namespace DataBaseConnection
         POSTGRE
     }
 
-    public class Shapes
+    public class Shape
     {
         public string Shape1 { get; set; }
         public string Shape2 { get; set; }
@@ -21,9 +21,9 @@ namespace DataBaseConnection
     {
         static void Main(string[] args)
         {
-            string connectionString = $"DB: {DBMS.MSSQL}; table: {nameof(Shapes)}; timeout: 10";
-          
-            CustomDbCommand<Shapes> db = new CustomDbCommand<Shapes>(connectionString, "select * from shapes");
+            string connectionString = $"DB: {DBMS.MSSQL}; table: {nameof(Shape)}; timeout: 10";
+
+            CustomDbCommand<Shape> db = new CustomDbCommand<Shape>(connectionString, "select * from shapes");
             db.GetData();
         }
     }
@@ -32,7 +32,7 @@ namespace DataBaseConnection
     {
         private string _connectionString;
 
-        public CustomDb(string connectionString) 
+        public CustomDb(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -40,30 +40,29 @@ namespace DataBaseConnection
         internal void OpenConnection()
         {
             Console.WriteLine($"StartConnection({_connectionString})");
-
         }
 
-        internal void CloseConnection() 
+        internal void CloseConnection()
         {
             Console.WriteLine($"EndConnection({_connectionString})");
         }
 
         internal List<T> RunSql(string sql)
-        {           
+        {
             Console.WriteLine(sql);
             return null;
         }
-        
+
     }
 
 
     class CustomDbCommand<T> : CustomDb<T> where T : class
     {
         private string _sql;
-        public CustomDbCommand(string connectionString, string sql) : base(connectionString) 
+        public CustomDbCommand(string connectionString, string sql) : base(connectionString)
         {
-            _sql= sql;
-        }        
+            _sql = sql;
+        }
 
         public List<T> GetData()
         {
