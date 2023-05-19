@@ -23,12 +23,12 @@ namespace DataBaseConnection
         {
             string connectionString = $"DB: {DBMS.MSSQL}; table: Shapes; timeout: 10";
           
-            CustomDbCommand<Shapes> db = new CustomDbCommand<Shapes>(connectionString);
+            CustomDbCommand<Shapes> db = new CustomDbCommand<Shapes>(connectionString, "select * from shapes");
             db.GetData();
         }
     }
 
-    class CustomDb
+    class CustomDb<T> where T : class
     {
         private string _connectionString;
 
@@ -37,28 +37,39 @@ namespace DataBaseConnection
             _connectionString = connectionString;
         }
 
-        internal void OpenConnection() 
+        internal void OpenConnection()
         {
-            //StartConnection(_connectionString);
+            Console.WriteLine($"StartConnection({_connectionString})");
+
         }
 
         internal void CloseConnection() 
-        { 
-            //EndConnection(_connectionString);
+        {
+            Console.WriteLine($"EndConnection({_connectionString})");
+        }
+
+        internal List<T> RunSql(string sql)
+        {           
+            Console.WriteLine(sql);
+            return null;
         }
         
     }
 
 
-    class CustomDbCommand<T> : CustomDb where T : class
+    class CustomDbCommand<T> : CustomDb<T> where T : class
     {
-        public CustomDbCommand(string connectionString) : base(connectionString) 
+        private string _sql;
+        public CustomDbCommand(string connectionString, string sql) : base(connectionString) 
         {
-
+            _sql= sql;
         }        
 
         public List<T> GetData()
         {
+            OpenConnection();
+            RunSql(_sql);
+            CloseConnection();
             return null;
         }
 
