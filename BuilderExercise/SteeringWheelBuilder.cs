@@ -17,9 +17,9 @@ namespace BuilderExercise
 		public void SteeringWheelType(string steeringWheelType) => Car.CarSteeringWheel.SteeringWheelType = steeringWheelType;
 		public void SteeringWheelPrize(int steeringWheelPrize) => Car.CarSteeringWheel.SteeringWheelPrize = steeringWheelPrize;
 
-		public SteeringWheelBuilder BuildLacquer()
+		public LacquerBuilder BuildLacquer()
 		{
-			return new SteeringWheelBuilder(this.Car);
+			return new LacquerBuilder(this.Car);
 		}
 	}
 }
