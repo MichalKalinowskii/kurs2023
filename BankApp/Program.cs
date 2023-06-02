@@ -28,11 +28,11 @@ namespace BankApp
 			cart.PaymentMethod = PaymentMethods.Blik;
 			cart.Products.Add(tire);
 
-			MakePurchase(cart);
+			MakePurchaseFactory(cart);
 		}
 
 
-		static void MakePurchase(Cart cart)
+		static void MakePurchaseFactory(Cart cart)
 		{
 			double summaryPrice = 0;
 
