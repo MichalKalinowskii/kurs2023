@@ -44,7 +44,7 @@ namespace BankApp
 			
 		}
 
-		static void PrintResult(IBankModel bank, PaymentMethods cartPayment, double summaryPrice)
+		static void PrintResult(IBankHelper bank, PaymentMethods cartPayment, double summaryPrice)
 		{
 			if (cartPayment != bank.AcceptablePaymentMetod) return;
 			double commison = bank.GetCommison(summaryPrice);

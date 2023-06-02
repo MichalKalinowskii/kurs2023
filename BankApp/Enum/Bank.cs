@@ -15,7 +15,7 @@ namespace BankApp.Enum
 	}
 	static class BankMethod
 	{
-		public static IBankModel GetBank(this Bank bank)
+		public static IBankHelper GetBank(this Bank bank)
 		{
 			switch (bank)
 			{

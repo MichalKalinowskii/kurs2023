@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankApp.Helper
 {
-    public class GNIHelper : IBankModel
+    public class GNIHelper : IBankHelper
     {
         private double _summaryPrice;
 

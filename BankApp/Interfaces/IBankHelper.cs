@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BankApp.Interfaces
 {
-    public interface IBankModel
+    public interface IBankHelper
     {
         double GetCommison(double summaryPrice);
         PaymentMethods AcceptablePaymentMetod { get; }
