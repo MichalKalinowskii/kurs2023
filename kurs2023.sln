@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderExercise", "BuilderE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApp", "BankApp\BankApp.csproj", "{3A85C720-005F-4A41-AA3B-404175082650}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSingelton", "CustomSingelton\CustomSingelton.csproj", "{4F194699-B301-4716-9812-42E35A410D39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3A85C720-005F-4A41-AA3B-404175082650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A85C720-005F-4A41-AA3B-404175082650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A85C720-005F-4A41-AA3B-404175082650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F194699-B301-4716-9812-42E35A410D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F194699-B301-4716-9812-42E35A410D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F194699-B301-4716-9812-42E35A410D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F194699-B301-4716-9812-42E35A410D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
