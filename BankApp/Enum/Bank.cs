@@ -1,4 +1,5 @@
-﻿using BankApp.Model;
+﻿using BankApp.Helper;
+using BankApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankApp.Enum
 {
-	public enum Bank
+    public enum Bank
 	{
 		OKP,
 		GNI

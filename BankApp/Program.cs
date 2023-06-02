@@ -1,9 +1,10 @@
 ﻿using BankApp.Enum;
+using BankApp.Interfaces;
 using BankApp.Model;
 
 namespace BankApp
 {
-	internal class Program
+    internal class Program
 	{
 		static void Main(string[] args)
 		{
