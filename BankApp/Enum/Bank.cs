@@ -19,9 +19,9 @@ namespace BankApp.Enum
 			switch (bank)
 			{
 				case Bank.OKP:
-					return new OKP();
+					return new OKPHelper();
 				case Bank.GNI:
-					return new GNI();
+					return new GNIHelper();
 				default:
 					return null;
 			}

@@ -7,24 +7,23 @@ using System.Threading.Tasks;
 
 namespace BankApp.Model
 {
-	public class OKP : IBankModel
+	public class GNIHelper : IBankModel
 	{
-
 		private double _summaryPrice;
 
-		private double Commission { 
-			get
-			{
-				if (_summaryPrice > 50) return 1;
-				return 2;
-			}
-		}
-		public PaymentMethods AcceptablePaymentMetod
+		public double Commission
 		{
 			get
 			{
-				return PaymentMethods.Przelewy24;
+				return 1.5;
 			}
+		}
+		public PaymentMethods AcceptablePaymentMetod 
+		{ 
+			get 
+			{
+				return PaymentMethods.Blik;
+			} 
 		}
 
 		public double GetCommison(double summaryPrice)
