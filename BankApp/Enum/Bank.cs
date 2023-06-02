@@ -10,8 +10,8 @@ namespace BankApp.Enum
 {
     public enum Bank
 	{
-		OKP,
-		GNI
+		Bank1,
+		Bank2
 	}
 	static class BankMethod
 	{
@@ -19,10 +19,10 @@ namespace BankApp.Enum
 		{
 			switch (bank)
 			{
-				case Bank.OKP:
-					return new OKPHelper();
-				case Bank.GNI:
-					return new GNIHelper();
+				case Bank.Bank1:
+					return new Bank1Helper();
+				case Bank.Bank2:
+					return new Bank2Helper();
 				default:
 					return null;
 			}

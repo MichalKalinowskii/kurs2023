@@ -24,7 +24,7 @@ namespace BankApp
 
 			Cart cart = new();
 
-			cart.Bank = Bank.GNI;
+			cart.Bank = Bank.Bank2;
 			cart.PaymentMethod = PaymentMethods.Blik;
 			cart.Products.Add(tire);
 
@@ -40,7 +40,10 @@ namespace BankApp
 			{
 				summaryPrice += product.Price;
 			}
-			PrintResult(cart.Bank.GetBank(), cart.PaymentMethod, summaryPrice);
+			if(cart.Bank.GetBank() != null)
+			{
+				PrintResult(cart.Bank.GetBank(), cart.PaymentMethod, summaryPrice);
+			}
 			
 		}
 

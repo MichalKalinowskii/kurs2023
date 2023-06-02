@@ -8,24 +8,22 @@ using System.Threading.Tasks;
 
 namespace BankApp.Helper
 {
-    public class OKPHelper : IBankHelper
+    public class Bank2Helper : IBankHelper
     {
-
         private double _summaryPrice;
 
-        private double Commission
+        public double Commission
         {
             get
             {
-                if (_summaryPrice > 50) return 1;
-                return 2;
+                return 1.5;
             }
         }
         public PaymentMethods AcceptablePaymentMetod
         {
             get
             {
-                return PaymentMethods.Przelewy24;
+                return PaymentMethods.Blik;
             }
         }
 
