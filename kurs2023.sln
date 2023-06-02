@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomStopWatch", "CustomSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseConnection", "DataBaseConnection\DataBaseConnection.csproj", "{F8DD3BEF-1679-4754-9950-808839021191}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderExercise", "BuilderExercise\BuilderExercise.csproj", "{9FAC46B7-9B37-45BB-90B5-C853E0D1BE88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderExercise", "BuilderExercise\BuilderExercise.csproj", "{9FAC46B7-9B37-45BB-90B5-C853E0D1BE88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApp", "BankApp\BankApp.csproj", "{3A85C720-005F-4A41-AA3B-404175082650}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9FAC46B7-9B37-45BB-90B5-C853E0D1BE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FAC46B7-9B37-45BB-90B5-C853E0D1BE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FAC46B7-9B37-45BB-90B5-C853E0D1BE88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A85C720-005F-4A41-AA3B-404175082650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A85C720-005F-4A41-AA3B-404175082650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A85C720-005F-4A41-AA3B-404175082650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A85C720-005F-4A41-AA3B-404175082650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
